@@ -37,7 +37,7 @@ def ativar_wifi():
   print('#######',end='')
   script("ifconfig wlan0 up") #ativa placa de rede wlan0, lembrar de criar forma de selecionar placa dinamicamente
   print("wlan0 ativa",end='')
-  script("iwlist wlan0 scanning |less |egrep 'Address|Channel|Quality=|ESSID:' > %s/h4ck3d.txt" %(samedir)) #escaneia redes e mostra apenas 
+  script("iwlist wlan0 scanning |less |egrep 'Address|Channel|Quality=|ESSID:' > %s/redes.txt" %(samedir)) #escaneia redes e mostra apenas 
   print('#######',end='')                                                                                   # Address, Canal e qualidade
   print('#######',end='')
   script('clear')
@@ -49,7 +49,7 @@ def ativar_mon():  #coloca placa em monitoramento
   print("wlan0 em modo monitoramento")
         
 def handshake():
-  script("cat %s/h4ck3d.txt" %(samedir))  #lista redes encontradas
+  script("cat %s/redes.txt" %(samedir))  #lista redes encontradas
   bssid = input("Address: ")
   channel = input("Channel: ")
   nome = "ataque"
