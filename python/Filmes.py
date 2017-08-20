@@ -28,6 +28,5 @@ while not sair:
         if filme['Response'] != 'False':
             printar_detalhes(filme)
         else:
-            print("")
-            print("Filme inválido")
-            print("")
+            print("\nFilme inválido\n")
+            
